@@ -1,0 +1,12 @@
+AuthType Basic
+AuthName "Secure area - Authentication required"
+AuthUserFile /usr/local/apache2/htdocs/.htpasswd
+Require valid-user
+
+<Files *.htpasswd>
+	Deny from all
+</Files>
+
+<Files pre-obfuscated.js>
+	Deny from all
+</Files>

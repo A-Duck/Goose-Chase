@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Let's Play a game</title>
+        <script src="script.js" defer></script>
+        <style>
+            body
+            {
+                background-color: black;
+            }
+
+            #video-container
+            {
+                top:0%;
+                left:0%;
+                height:100%;
+                width:100%;
+                overflow: hidden;
+                position: absolute;
+                z-index: 0;
+            }
+
+            video
+            {
+                position:absolute;
+                z-index:0;
+                width: 100%;
+                z-index: 0;
+            }
+
+            #code {
+                text-align: center;
+                position: absolute;
+                left: 25%;
+                top: 50%;
+                z-index:99999;
+                font-size: 25px;
+                letter-spacing: 0px;
+                word-spacing: 0px;
+                color: #000000;
+                font-weight: 700;
+                text-decoration: none;
+                font-style: normal;
+                font-variant: normal;
+                text-transform: uppercase;
+            }
+
+            .glow {
+                text-align: center;
+                z-index:99999;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+
+            #code a {
+                text-align: center;
+                z-index:99999;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+
+            @-webkit-keyframes glow
+            {
+                from
+                {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                }
+                to
+                {
+                    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            function lastmsg()
+            {
+                alert("Have fun weary traveler");
+                alert("May the probabilities be ever to your liking");
+            }
+        </script>
+    </head>
+     
+    <body onload="lastmsg()">
+
+        <div id="video-container">
+            <video autoplay loop poster="poster.png" muted="muted">
+                <source id="mp4" src="congrat.mp4" type="video/mp4">
+                Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div><!-- end video-container -->
+        <div id="code">
+            <p class="glow">Code</p>
+
+            For use with:<br/>
+            <a href="https://store.steampowered.com/">https://store.steampowered.com/</a><br/>
+            <br/>
+            Because I couldn't get a code for the actual game.
+        </div>
+    </body>
+</html>
+
+
